@@ -1,0 +1,25 @@
+[general]
+accounts = personal
+
+[Account personal]
+localrepository = personal-local
+remoterepository = personal-remote
+
+[Repository personal-local]
+type = Maildir
+localfolders = ~/.local/share/mail
+
+[Repository personal-remote]
+type = Gmail
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+createfolders = false
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+# vim:ft=cfg
